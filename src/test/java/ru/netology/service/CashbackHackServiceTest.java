@@ -1,10 +1,10 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class CashbackHackServiceTest {
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void add1000() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
@@ -12,10 +12,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1000;
 
-        org.testng.Assert.assertEquals(actual, expected);
+        org.junit.Assert.assertEquals(actual, expected);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void add0() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
@@ -23,10 +23,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-        org.testng.Assert.assertEquals(actual, expected);
+        org.junit.Assert.assertEquals(actual, expected);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void add100() {
         CashbackHackService service = new CashbackHackService();
         int amount = 900;
@@ -34,10 +34,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 100;
 
-        org.testng.Assert.assertEquals(actual, expected);
+        org.junit.Assert.assertEquals(actual, expected);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void ofMore1000() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1900;
@@ -45,6 +45,6 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 100;
 
-        org.testng.Assert.assertEquals(actual, expected);
+        org.junit.Assert.assertEquals(actual, expected);
     }
 }
